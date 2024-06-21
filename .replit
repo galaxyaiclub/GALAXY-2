@@ -1,0 +1,34 @@
+entrypoint = "xecute_shell.py"
+modules = ["python-3.10:v18-20230807-322e88b"]
+
+[nix]
+channel = "stable-23_05"
+
+[unitTest]
+language = "python3"
+
+[gitHubImport]
+requiredFiles = [".replit", "replit.nix"]
+
+[deployment]
+run = ["python3", "xecute_shell.py"]
+deploymentTarget = "cloudrun"
+
+[[ports]]
+localPort = 1338
+externalPort = 80
+
+[[ports]]
+localPort = 4000
+externalPort = 3000
+
+[[ports]]
+localPort = 5000
+externalPort = 5000
+exposeLocalhost = true
+
+[[ports]]
+localPort = 8080
+
+[[ports]]
+localPort = 8284
