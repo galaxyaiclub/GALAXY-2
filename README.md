@@ -1,1 +1,1 @@
-# GALAXY_CLUB_AI
+# galaxy-ai-club-
